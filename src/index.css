@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('./assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
+    font-weight: normal;
+    fnost-style: normal;
+}
