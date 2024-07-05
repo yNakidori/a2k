@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Item = styled.div`
-  background: #fff;
+  background: #FBD4D4;
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -10,7 +10,7 @@ const Item = styled.div`
   cursor: pointer;
   transition: transform 0.2s;
   margin-bottom: 16px;
-  font-family: 'NomeDaFonte', sans-serif;
+  font-family: 'Ubuntu-Bold', sans-serif;
 
   &:hover {
     transform: scale(1.05);
@@ -28,12 +28,12 @@ const Label = styled.div`
 `;
 
 const GridItem = ({ label, image }) => {
-    return (
-        <Item>
-            {image && <Image src={image} alt={label} />}
-            <Label>{label}</Label>
-        </Item>
-    );
+  return (
+    <Item>
+      {image && <Image src={image} alt={label} />}
+      <Label>{label}</Label>
+    </Item>
+  );
 };
 
 export default GridItem;

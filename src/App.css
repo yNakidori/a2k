@@ -12,23 +12,50 @@
 }
 
 .my-masonry-grid {
-    display: -webkit-box;
-    /* Not needed if autoprefixing */
-    display: -ms-flexbox;
-    /* Not needed if autoprefixing */
     display: flex;
-    margin-left: -30px;
-    /* gutter size offset */
+    margin-left: -15px;
+    /* Adjusted gutter size */
     width: auto;
 }
 
 .my-masonry-grid_column {
-    padding-left: 30px;
-    /* gutter size */
+    padding-left: 15px;
+    /* Adjusted gutter size */
     background-clip: padding-box;
 }
 
-/* Style your items */
 .my-masonry-grid_column>div {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    /* Adjusted bottom margin */
+}
+
+/* Optional media query styles */
+@media (max-width: 1100px) {
+    .my-masonry-grid {
+        margin-left: -10px;
+    }
+
+    .my-masonry-grid_column {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .my-masonry-grid {
+        margin-left: -5px;
+    }
+
+    .my-masonry-grid_column {
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .my-masonry-grid {
+        margin-left: -5px;
+    }
+
+    .my-masonry-grid_column {
+        padding-left: 5px;
+    }
 }

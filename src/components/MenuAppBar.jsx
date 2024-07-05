@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, UserCircleIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
+import automa from '../assets/images/Logo-Automacao-2000.png';
 
 const navigation = [
     { name: 'TOTVS Food Service', href: '/mainpage', current: false },
@@ -20,7 +21,7 @@ export default function MenuAppBar() {
     const [notificationCount, setNotificationCount] = useState(0);
 
     return (
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className="bg-red-800">
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -38,11 +39,17 @@ export default function MenuAppBar() {
                                 </Disclosure.Button>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                <div className="flex flex-shrink-0 items-center">
+                                <div className="flex flex-shrink-0 items-center space-x-4">
                                     <img
                                         className="h-8 w-auto"
                                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                                         alt="Sua Empresa"
+                                    />
+                                    <span className="text-white">|</span> {/* Barrinha ou X */}
+                                    <img
+                                        className="h-8 w-auto"
+                                        src={automa}
+                                        alt="Automa"
                                     />
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block">
