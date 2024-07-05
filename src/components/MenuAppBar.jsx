@@ -1,6 +1,6 @@
-import { Fragment, useState } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, UserCircleIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useState } from 'react';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import automa from '../assets/images/Logo-Automacao-2000.png';
 
@@ -18,7 +18,6 @@ function classNames(...classes) {
 }
 
 export default function MenuAppBar() {
-    const [notificationCount, setNotificationCount] = useState(0);
 
     return (
         <Disclosure as="nav" className="bg-red-800">
