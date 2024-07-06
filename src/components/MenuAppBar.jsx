@@ -2,7 +2,7 @@ import React from 'react';
 import { Disclosure } from '@headlessui/react';
 
 const navigation = [
-    { name: 'TOTVS Food Service', href: '/mainpage', current: false },
+    { name: 'TOTVS Food Service', href: '/', current: false },
     { name: 'Equipamentos', href: '/sales', current: false },
     { name: 'Compras', href: '/shop', current: false },
     { name: 'XTAG', href: '/xtag', current: false },
@@ -44,7 +44,7 @@ export default function MenuAppBar() {
                                                 href={item.href}
                                                 className={classNames(
                                                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                    'px-3 py-2 rounded-md text-sm font-medium'
+                                                    'px-3 py-2 rounded-md text-sm font-medium font-ubuntu' // Adicionando classe 'font-ubuntu' aqui
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
                                             >
@@ -65,7 +65,7 @@ export default function MenuAppBar() {
                                     href={item.href}
                                     className={classNames(
                                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                        'block px-3 py-2 rounded-md text-base font-medium'
+                                        'block px-3 py-2 rounded-md text-base font-medium font-ubuntu' // Adicionando classe 'font-ubuntu' aqui também
                                     )}
                                     aria-current={item.current ? 'page' : undefined}
                                 >
