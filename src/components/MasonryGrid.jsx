@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import GridItem from './GridItem';
 
 const MasonryGridContainer = styled.div`
@@ -19,7 +18,7 @@ const MasonryGrid = ({ items }) => {
     <MasonryGridContainer>
       {items.map((item, index) => (
         <MasonryGridColumn key={index}>
-          <GridItem label={item.label} image={item.image} />
+          <GridItem label={item.label} image={item.image} path={item.path} />
         </MasonryGridColumn>
       ))}
     </MasonryGridContainer>
