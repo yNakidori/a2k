@@ -117,12 +117,12 @@ const PdvTotvs = () => {
         'Transforme a Gestão do seu Negócio com Nosso Sistema de PDV e Caixa',
         'Maximize a eficiência e os lucros do seu negócio com nosso sistema de gestão avançado. Nossa solução automatiza processos diários, proporcionando uma operação mais ágil e lucrativa. Além disso, o módulo fiscal integrado permite a emissão de cupons fiscais eletrônicos (CF-e), garantindo conformidade e praticidade.',
         'Atendimento Completo para Diversos Segmentos:',
-        '- Bares e Restaurantes',
-        '- Lanchonetes e Padarias',
-        '- Choperias e Mercados',
-        '- Açougues e Adegas',
-        '- Mercearias e Serviços de Delivery',
-        '- Restaurantes por Kilo, entre outros.',
+        'Bares e Restaurantes',
+        'Lanchonetes e Padarias',
+        'Choperias e Mercados',
+        'Açougues e Adegas',
+        'Mercearias e Serviços de Delivery',
+        'Restaurantes por Kilo, entre outros.',
         'Ambiente Técnico:',
         'O sistema é compatível com a plataforma Windows, oferecendo uma interface amigável e de fácil utilização.',
     ];
@@ -138,7 +138,7 @@ const PdvTotvs = () => {
                         descriptions={pdvDescription}
                     />
 
-                    <h2 className="text-white text-3xl font-bold mt-8">Clientes Populares</h2>
+                    <h2 className="text-white text-3xl font-bold mt-8">Parceiros Populares</h2>
                     <div className="mt-8 w-full flex flex-wrap justify-center gap-4">
                         {clients.map((client, index) => (
                             <Card
