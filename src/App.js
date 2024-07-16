@@ -10,6 +10,7 @@ import GestaoWeb from './pages/TOTVSPDV/gestaoWeb';
 import Kds from './pages/TOTVSPDV/kds';
 import PagamentoQr from './pages/TOTVSPDV/pagamentoQR';
 import PdvTotvs from './pages/TOTVSPDV/pdvTotvs';
+import PedidoGarcom from './pages/TOTVSPDV/pedidoGarcom';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/kds" element={<Kds />} />
       <Route path="/pagamentoqr" element={<PagamentoQr />} />
       <Route path="/pdvtotvs" element={<PdvTotvs />} />
+      <Route path="/pedidogarcom" element={<PedidoGarcom />} />
     </Routes>
   );
 }
