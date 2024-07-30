@@ -1,30 +1,60 @@
-import React from 'react';
+import React from "react";
+import { Image, Text, Stack } from "@fluentui/react";
 
 const DescriptionList = ({ items }) => (
-    <ul className="list-disc pl-6 text-gray-700">
-        {items.map((item, index) => (
-            <li key={index} className="mb-2">{item}</li>
-        ))}
-    </ul>
+  <ul style={{ listStyleType: "disc", paddingLeft: "20px", color: "#4a4a4a" }}>
+    {items.map((item, index) => (
+      <li key={index} style={{ marginBottom: "8px" }}>
+        {item}
+      </li>
+    ))}
+  </ul>
 );
 
 const VideoComponent = ({ videoSrc, title, descriptions }) => {
-    return (
-        <div className="bg-gray-200 shadow-md rounded-lg overflow-hidden md:flex max-w-8xl mx-auto">
-            <div className="md:w-1/2">
-                <video className="w-full h-full object-cover" controls>
-                    <source src={videoSrc} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div className="p-6 md:p-8 md:w-1/2 flex flex-col justify-center">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">{title}</h2>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                    <DescriptionList items={descriptions} />
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div
+      style={{
+        display: "flex",
+        maxWidth: "1200px",
+        margin: "auto",
+        boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+        borderRadius: "8px",
+        overflow: "hidden",
+        backgroundColor: "#f3f2f1",
+      }}
+    >
+      <div style={{ flex: "1 0 50%" }}>
+        <video
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          controls
+        >
+          <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div style={{ flex: "1 0 50%", padding: "16px" }}>
+        <Stack tokens={{ childrenGap: 8 }}>
+          <Text
+            variant="xxLarge"
+            styles={{ root: { fontWeight: "bold", color: "#333" } }}
+          >
+            {title}
+          </Text>
+          <div
+            style={{
+              backgroundColor: "#ffffff",
+              padding: "16px",
+              borderRadius: "8px",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+            }}
+          >
+            <DescriptionList items={descriptions} />
+          </div>
+        </Stack>
+      </div>
+    </div>
+  );
 };
 
 export default VideoComponent;
